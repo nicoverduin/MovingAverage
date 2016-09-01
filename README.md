@@ -8,6 +8,13 @@ A moving avarage based on floats would be defined as follows:
 MovingAverage <float> myMovingAverage(numberOfEntries);
 ```
 
+Where
+
+<float> means the moving average is calculated based on floats
+Other examples would be <unsigned int> or <uint8_t> or <long> of <double>
+
+NumberOfEntries tells the Moving Average on how many values the average is based. Also note that when the moving average starts, there could be insufficient values given to the moving average object. The object keeps track of this. If only one value has been added during calculation the average will of course be based on the single value.
+
 
  * Author	: Nico Verduin (nico.verduin@ziggo.nl)
  * Date		: 31-8-2016
