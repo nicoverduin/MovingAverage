@@ -23,13 +23,13 @@ During thew setup internally a dynamic array will be created. If there is not en
 At the top of **MovingAverage.h** in the library. 
 
 ##Functions
-######MovingAverage(uint16_t)
+######**MovingAverage(uint16_t)**
 This is the object constructor that initializes the object by setting certain values to zero and allocating a dynamic array used for internal processing. The parameter is the number of values used to calculate the moving averager.
 
-######~MovingAverage()
+######**~MovingAverage()**
 This is the destructor of the object. When called, It frees the memory of the internal array giving it back to the free memory heap. The object still exists but cannot be used any more.
 
-######T CalculateMovingAverage(T)
+######**T CalculateMovingAverage(T)**
 T is the type used i.e. ```<float>``` or ```<int>``` etc.
 
 ##Example sketch
