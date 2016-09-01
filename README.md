@@ -17,7 +17,7 @@ Other examples could be ```<unsigned int>``` or ```<uint8_t>``` or ```<long>``` 
 As a moving average concerns adding numbers to divide them later an overflow might occur. The Arduino has no safety built in so the following is done. ```<floats>``` and ```<doubles>``` are summed in a ````<float total>```. This means that since floats have an accuracy of 6-7 digits at most, significance might be lost by larger values. Unfortunately the library does not resolve this. all other types are summed in a ```<32-bit signed integer>``` as a moving average might also imply negative values. The result is always returned in the type defined when creating the object.
 
 ######Memory Check
-During thew setup internally a dynamic array will be created. If there is not enough (and with only 2K on an Arduino UNO) you may set the assert function on. This might be useful during debugging. Turing the assert function on is done by uncommenting the line
+During thew setup internally a dynamic array will be created. If there is not enough (and with only 2K on an Arduino UNO) you may set the assert function on. This might be useful during debugging. Turning the assert function on is done by uncommenting the line
 
 ```//#define DEBUG_MODE			// comment this line to avoid assert checks```
 At the top of **MovingAverage.h** in the library. 
